@@ -1,0 +1,12 @@
+source tb_compat.tcl
+set ns [new Simulator]
+
+# Create four nodes
+set nodeA [$ns node]
+set nodeB [$ns node]
+
+# Create a  duplex link
+set link0 [$ns duplex-link $nodeA $nodeB 100Mb 200ms DropTail]
+
+#Run the simulation
+$ns run
